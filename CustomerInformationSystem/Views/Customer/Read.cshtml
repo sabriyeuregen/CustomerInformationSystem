@@ -1,0 +1,33 @@
+﻿@model  List<CustomerInformationSystem.Models.Customer>
+
+@{
+}
+<h1>Customers</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Lastname</th>
+            <th>Tc</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.Lastname</td>
+                <td>@customer.Tc</td>
+                <td>@customer.Emaİl</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Address</td>
+                <td><a href="View/@customer.Id">View</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
